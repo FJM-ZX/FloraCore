@@ -1,0 +1,632 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		147B2FE0216F038100A6F95D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 147B2FDF216F038100A6F95D /* AppDelegate.m */; };
+		147B2FE3216F038100A6F95D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 147B2FE2216F038100A6F95D /* ViewController.m */; };
+		147B2FE6216F038100A6F95D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 147B2FE4216F038100A6F95D /* Main.storyboard */; };
+		147B2FE8216F038300A6F95D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 147B2FE7216F038300A6F95D /* Assets.xcassets */; };
+		147B2FEB216F038300A6F95D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 147B2FE9216F038300A6F95D /* LaunchScreen.storyboard */; };
+		147B2FEE216F038300A6F95D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 147B2FED216F038300A6F95D /* main.m */; };
+		147B2FF8216F038300A6F95D /* FloraCoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 147B2FF7216F038300A6F95D /* FloraCoreTests.m */; };
+		147B3003216F038300A6F95D /* FloraCoreUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 147B3002216F038300A6F95D /* FloraCoreUITests.m */; };
+		147B3016216F05E300A6F95D /* AdaptiveContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 147B3013216F05E300A6F95D /* AdaptiveContainerView.m */; };
+		147B3017216F05E300A6F95D /* OdometerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 147B3014216F05E300A6F95D /* OdometerView.m */; };
+		147B301A216F297400A6F95D /* ScratchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 147B3019216F297400A6F95D /* ScratchView.m */; };
+		147B301E216F34D800A6F95D /* UIImage+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 147B301D216F34D800A6F95D /* UIImage+Image.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		147B2FF4216F038300A6F95D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 147B2FD3216F038100A6F95D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 147B2FDA216F038100A6F95D;
+			remoteInfo = FloraCore;
+		};
+		147B2FFF216F038300A6F95D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 147B2FD3216F038100A6F95D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 147B2FDA216F038100A6F95D;
+			remoteInfo = FloraCore;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		147B2FDB216F038100A6F95D /* FloraCore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FloraCore.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		147B2FDE216F038100A6F95D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		147B2FDF216F038100A6F95D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		147B2FE1216F038100A6F95D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		147B2FE2216F038100A6F95D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		147B2FE5216F038100A6F95D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		147B2FE7216F038300A6F95D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		147B2FEA216F038300A6F95D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		147B2FEC216F038300A6F95D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		147B2FED216F038300A6F95D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		147B2FF3216F038300A6F95D /* FloraCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FloraCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		147B2FF7216F038300A6F95D /* FloraCoreTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FloraCoreTests.m; sourceTree = "<group>"; };
+		147B2FF9216F038300A6F95D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		147B2FFE216F038300A6F95D /* FloraCoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FloraCoreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		147B3002216F038300A6F95D /* FloraCoreUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FloraCoreUITests.m; sourceTree = "<group>"; };
+		147B3004216F038300A6F95D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		147B3012216F05E300A6F95D /* OdometerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OdometerView.h; sourceTree = "<group>"; };
+		147B3013216F05E300A6F95D /* AdaptiveContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdaptiveContainerView.m; sourceTree = "<group>"; };
+		147B3014216F05E300A6F95D /* OdometerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OdometerView.m; sourceTree = "<group>"; };
+		147B3015216F05E300A6F95D /* AdaptiveContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdaptiveContainerView.h; sourceTree = "<group>"; };
+		147B3018216F297400A6F95D /* ScratchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScratchView.h; sourceTree = "<group>"; };
+		147B3019216F297400A6F95D /* ScratchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScratchView.m; sourceTree = "<group>"; };
+		147B301C216F34D800A6F95D /* UIImage+Image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Image.h"; sourceTree = "<group>"; };
+		147B301D216F34D800A6F95D /* UIImage+Image.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Image.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		147B2FD8216F038100A6F95D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		147B2FF0216F038300A6F95D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		147B2FFB216F038300A6F95D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		147B2FD2216F038100A6F95D = {
+			isa = PBXGroup;
+			children = (
+				147B3010216F03F400A6F95D /* core */,
+				147B2FDD216F038100A6F95D /* FloraCore */,
+				147B2FF6216F038300A6F95D /* FloraCoreTests */,
+				147B3001216F038300A6F95D /* FloraCoreUITests */,
+				147B2FDC216F038100A6F95D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		147B2FDC216F038100A6F95D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				147B2FDB216F038100A6F95D /* FloraCore.app */,
+				147B2FF3216F038300A6F95D /* FloraCoreTests.xctest */,
+				147B2FFE216F038300A6F95D /* FloraCoreUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		147B2FDD216F038100A6F95D /* FloraCore */ = {
+			isa = PBXGroup;
+			children = (
+				147B2FDE216F038100A6F95D /* AppDelegate.h */,
+				147B2FDF216F038100A6F95D /* AppDelegate.m */,
+				147B2FE1216F038100A6F95D /* ViewController.h */,
+				147B2FE2216F038100A6F95D /* ViewController.m */,
+				147B2FE4216F038100A6F95D /* Main.storyboard */,
+				147B2FE7216F038300A6F95D /* Assets.xcassets */,
+				147B2FE9216F038300A6F95D /* LaunchScreen.storyboard */,
+				147B2FEC216F038300A6F95D /* Info.plist */,
+				147B2FED216F038300A6F95D /* main.m */,
+			);
+			path = FloraCore;
+			sourceTree = "<group>";
+		};
+		147B2FF6216F038300A6F95D /* FloraCoreTests */ = {
+			isa = PBXGroup;
+			children = (
+				147B2FF7216F038300A6F95D /* FloraCoreTests.m */,
+				147B2FF9216F038300A6F95D /* Info.plist */,
+			);
+			path = FloraCoreTests;
+			sourceTree = "<group>";
+		};
+		147B3001216F038300A6F95D /* FloraCoreUITests */ = {
+			isa = PBXGroup;
+			children = (
+				147B3002216F038300A6F95D /* FloraCoreUITests.m */,
+				147B3004216F038300A6F95D /* Info.plist */,
+			);
+			path = FloraCoreUITests;
+			sourceTree = "<group>";
+		};
+		147B3010216F03F400A6F95D /* core */ = {
+			isa = PBXGroup;
+			children = (
+				147B301B216F348100A6F95D /* category */,
+				147B3011216F05E300A6F95D /* component */,
+			);
+			path = core;
+			sourceTree = "<group>";
+		};
+		147B3011216F05E300A6F95D /* component */ = {
+			isa = PBXGroup;
+			children = (
+				147B3018216F297400A6F95D /* ScratchView.h */,
+				147B3019216F297400A6F95D /* ScratchView.m */,
+				147B3012216F05E300A6F95D /* OdometerView.h */,
+				147B3014216F05E300A6F95D /* OdometerView.m */,
+				147B3015216F05E300A6F95D /* AdaptiveContainerView.h */,
+				147B3013216F05E300A6F95D /* AdaptiveContainerView.m */,
+			);
+			path = component;
+			sourceTree = "<group>";
+		};
+		147B301B216F348100A6F95D /* category */ = {
+			isa = PBXGroup;
+			children = (
+				147B301C216F34D800A6F95D /* UIImage+Image.h */,
+				147B301D216F34D800A6F95D /* UIImage+Image.m */,
+			);
+			path = category;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		147B2FDA216F038100A6F95D /* FloraCore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 147B3007216F038300A6F95D /* Build configuration list for PBXNativeTarget "FloraCore" */;
+			buildPhases = (
+				147B2FD7216F038100A6F95D /* Sources */,
+				147B2FD8216F038100A6F95D /* Frameworks */,
+				147B2FD9216F038100A6F95D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FloraCore;
+			productName = FloraCore;
+			productReference = 147B2FDB216F038100A6F95D /* FloraCore.app */;
+			productType = "com.apple.product-type.application";
+		};
+		147B2FF2216F038300A6F95D /* FloraCoreTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 147B300A216F038300A6F95D /* Build configuration list for PBXNativeTarget "FloraCoreTests" */;
+			buildPhases = (
+				147B2FEF216F038300A6F95D /* Sources */,
+				147B2FF0216F038300A6F95D /* Frameworks */,
+				147B2FF1216F038300A6F95D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				147B2FF5216F038300A6F95D /* PBXTargetDependency */,
+			);
+			name = FloraCoreTests;
+			productName = FloraCoreTests;
+			productReference = 147B2FF3216F038300A6F95D /* FloraCoreTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		147B2FFD216F038300A6F95D /* FloraCoreUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 147B300D216F038300A6F95D /* Build configuration list for PBXNativeTarget "FloraCoreUITests" */;
+			buildPhases = (
+				147B2FFA216F038300A6F95D /* Sources */,
+				147B2FFB216F038300A6F95D /* Frameworks */,
+				147B2FFC216F038300A6F95D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				147B3000216F038300A6F95D /* PBXTargetDependency */,
+			);
+			name = FloraCoreUITests;
+			productName = FloraCoreUITests;
+			productReference = 147B2FFE216F038300A6F95D /* FloraCoreUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		147B2FD3216F038100A6F95D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "Fu Jiaming";
+				TargetAttributes = {
+					147B2FDA216F038100A6F95D = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					147B2FF2216F038300A6F95D = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 147B2FDA216F038100A6F95D;
+					};
+					147B2FFD216F038300A6F95D = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 147B2FDA216F038100A6F95D;
+					};
+				};
+			};
+			buildConfigurationList = 147B2FD6216F038100A6F95D /* Build configuration list for PBXProject "FloraCore" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 147B2FD2216F038100A6F95D;
+			productRefGroup = 147B2FDC216F038100A6F95D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				147B2FDA216F038100A6F95D /* FloraCore */,
+				147B2FF2216F038300A6F95D /* FloraCoreTests */,
+				147B2FFD216F038300A6F95D /* FloraCoreUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		147B2FD9216F038100A6F95D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				147B2FEB216F038300A6F95D /* LaunchScreen.storyboard in Resources */,
+				147B2FE8216F038300A6F95D /* Assets.xcassets in Resources */,
+				147B2FE6216F038100A6F95D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		147B2FF1216F038300A6F95D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		147B2FFC216F038300A6F95D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		147B2FD7216F038100A6F95D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				147B3017216F05E300A6F95D /* OdometerView.m in Sources */,
+				147B301A216F297400A6F95D /* ScratchView.m in Sources */,
+				147B2FE3216F038100A6F95D /* ViewController.m in Sources */,
+				147B2FEE216F038300A6F95D /* main.m in Sources */,
+				147B301E216F34D800A6F95D /* UIImage+Image.m in Sources */,
+				147B3016216F05E300A6F95D /* AdaptiveContainerView.m in Sources */,
+				147B2FE0216F038100A6F95D /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		147B2FEF216F038300A6F95D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				147B2FF8216F038300A6F95D /* FloraCoreTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		147B2FFA216F038300A6F95D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				147B3003216F038300A6F95D /* FloraCoreUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		147B2FF5216F038300A6F95D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 147B2FDA216F038100A6F95D /* FloraCore */;
+			targetProxy = 147B2FF4216F038300A6F95D /* PBXContainerItemProxy */;
+		};
+		147B3000216F038300A6F95D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 147B2FDA216F038100A6F95D /* FloraCore */;
+			targetProxy = 147B2FFF216F038300A6F95D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		147B2FE4216F038100A6F95D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				147B2FE5216F038100A6F95D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		147B2FE9216F038300A6F95D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				147B2FEA216F038300A6F95D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		147B3005216F038300A6F95D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		147B3006216F038300A6F95D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		147B3008216F038300A6F95D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T8R53TW4Z5;
+				INFOPLIST_FILE = FloraCore/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.fjmdev.FloraCore;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		147B3009216F038300A6F95D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T8R53TW4Z5;
+				INFOPLIST_FILE = FloraCore/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.fjmdev.FloraCore;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		147B300B216F038300A6F95D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T8R53TW4Z5;
+				INFOPLIST_FILE = FloraCoreTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.fjmdev.FloraCoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FloraCore.app/FloraCore";
+			};
+			name = Debug;
+		};
+		147B300C216F038300A6F95D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T8R53TW4Z5;
+				INFOPLIST_FILE = FloraCoreTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.fjmdev.FloraCoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FloraCore.app/FloraCore";
+			};
+			name = Release;
+		};
+		147B300E216F038300A6F95D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T8R53TW4Z5;
+				INFOPLIST_FILE = FloraCoreUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.fjmdev.FloraCoreUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FloraCore;
+			};
+			name = Debug;
+		};
+		147B300F216F038300A6F95D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T8R53TW4Z5;
+				INFOPLIST_FILE = FloraCoreUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.fjmdev.FloraCoreUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FloraCore;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		147B2FD6216F038100A6F95D /* Build configuration list for PBXProject "FloraCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				147B3005216F038300A6F95D /* Debug */,
+				147B3006216F038300A6F95D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		147B3007216F038300A6F95D /* Build configuration list for PBXNativeTarget "FloraCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				147B3008216F038300A6F95D /* Debug */,
+				147B3009216F038300A6F95D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		147B300A216F038300A6F95D /* Build configuration list for PBXNativeTarget "FloraCoreTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				147B300B216F038300A6F95D /* Debug */,
+				147B300C216F038300A6F95D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		147B300D216F038300A6F95D /* Build configuration list for PBXNativeTarget "FloraCoreUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				147B300E216F038300A6F95D /* Debug */,
+				147B300F216F038300A6F95D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 147B2FD3216F038100A6F95D /* Project object */;
+}
