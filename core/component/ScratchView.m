@@ -9,8 +9,8 @@
 #import "ScratchView.h"
 #import <QuartzCore/QuartzCore.h>
 
-
-@implementation ScratchView{
+@interface ScratchView ()
+{
     NSMutableArray *rectArray ;
     NSMutableArray *passRectArray ;
     
@@ -23,6 +23,9 @@
     CGContextRef  maskContext ;
 }
 
+@end
+
+@implementation ScratchView
 #pragma mark --- init
 - (instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
