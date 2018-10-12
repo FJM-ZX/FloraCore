@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "FJMFloraCore"
-  s.version      = "1.0.1"
+  s.version      = "1.1.0"
   s.summary      = "FJMFloraCore have some object-c component"
 
   # This description is used to generate tags and improve search results.
@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-  some object-c component and fix bug
+  some object-c component and category
                    DESC
 
   s.homepage     = "https://github.com/FJM-ZX/FloraCore"
@@ -64,7 +64,7 @@ Pod::Spec.new do |s|
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-  s.platform     = :ios
+  s.platform     = :ios, "9.0"
   # s.platform     = :ios, "5.0"
 
   #  When using multiple platforms
@@ -91,11 +91,19 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "core/component/*.{h,m}"
+  # s.source_files  = "core/component/*.{h,m}"
   # s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
+  s.subspec 'component' do |ss|
+    ss.source_files = 'core/component/*.{h,m}'
+    ss.public_header_files = 'core/component/*.h'
+  end
 
+  s.subspec 'category' do |ss|
+    ss.source_files = 'core/category/*.{h,m}'
+    ss.public_header_files = 'core/category/*.h'
+  end
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #

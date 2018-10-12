@@ -10,7 +10,11 @@
 #import "OdometerView.h"
 #import "AdaptiveContainerView.h"
 #import "ScratchView.h"
-#import "UIImage+Image.h"
+#import "ScrollTextView.h"
+
+#import "UIImage+CreateImage.h"
+#import "UIView+FrameExpanded.h"
+
 
 @interface ViewController ()<ScratchViewDelegate>{
     OdometerView * odometerView;
@@ -43,6 +47,20 @@
     
     UITapGestureRecognizer *singleTapOVBlock = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(fingerTappedOV:)];
     [odometerView addGestureRecognizer:singleTapOVBlock];
+    
+    ScrollTextView *stv = [[ScrollTextView alloc] initWithFrame:CGRectMake(0, 100, 200, 20)];
+    stv.backgroundColor = [UIColor magentaColor];
+    stv.center_x = self.view.center_x;
+    stv.fontSize = 18;
+    stv.textColor = [UIColor blackColor];
+    [self.view addSubview:stv];
+    stv.textDataArr = @[@"ScrollTextView test1",@"ScrollTextView test2",@"ScrollTextView test3"];
+    [stv startScrollBottomToTopWithNoSpace];
+    
+    UIImageView *createImg = [[UIImageView alloc] initWithImage:[UIImage ClipCircleImageWithImage:[UIImage imageWithSize:CGSizeMake(100, 100) radious:0 startHColor:[UIColor redColor] midHColor:[UIColor greenColor] endHColor:[UIColor blueColor]] circleSize:CGSizeMake(100, 100) borderWidth:4 borderColor:[[UIColor blackColor] colorWithAlphaComponent:0.2]]];
+    createImg.y = 130;
+    createImg.center_x = self.view.center_x;
+    [self.view addSubview:createImg];
     
 }
 -(void)fingerTappedOV:(id)sender{

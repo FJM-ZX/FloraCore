@@ -22,7 +22,6 @@
 @property (nonatomic,assign) CGFloat lineSpace;
 @property (nonatomic,copy)   UIColor * textColor;
 @property (nonatomic)        NSTextAlignment textAlignment;
-@property (nonatomic) NSString *formatLLKey;
 - (void)startScrollBottomToTopWithNoSpace;
 - (void)startScrollTopToBottomWithNoSpace;
 

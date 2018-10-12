@@ -8,6 +8,12 @@
 
 #import "ScrollTextView.h"
 
+#define isBlankString(string) \
+(string == nil || \
+string == NULL || \
+[string isKindOfClass:[NSNull class]] ||\
+[[string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] length]==0)
+
 @interface ScrollTextView(){
     UILabel * _currentScrollLabel;
     UILabel * _standbyScrollLabel;
@@ -61,7 +67,6 @@
     _needStop  = NO;
     _isRunning = NO;
     
-    _formatLLKey = nil;
     _textDataArr   = @[];
     
     _textStayTime  = 3;
@@ -115,7 +120,8 @@
     _needStop = NO;
 }
 - (void)createScrollLabelNeedStandbyLabel{
-    self.frame_height = self.frame_height<_fontSize?_fontSize:self.frame_height;
+    float h = self.frame.size.height<_fontSize?_fontSize:self.frame.size.height;
+    self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, h);
     int count = self.frame.size.height/_fontSize+1;
     count = count<2?2:count;
     for (int idx = 0; idx<count ; idx++) {
@@ -142,25 +148,26 @@
     NSInteger dataIdx = _index;
     for (int i=0; i<_LabelArr.count; i++,dataIdx = [self nextIndex:dataIdx]) {
         UILabel *lb = _LabelArr[i];
-        if (isBlankString(_formatLLKey)) {
-            lb.text = _textDataArr[dataIdx];
-        }else{
-            lb.text = NSLLKeyFormatString(_formatLLKey,_textDataArr[dataIdx]);
-        }
-        
-        lb.frame_y = (lb.frame_height + _lineSpace)*direction.integerValue*i;
+        lb.text = _textDataArr[dataIdx];
+        CGFloat x = lb.frame.origin.x;
+        CGFloat width = lb.frame.size.width;
+        CGFloat height = lb.frame.size.height;
+        lb.frame = CGRectMake(x, (lb.frame.size.height + _lineSpace)*direction.integerValue*i, width, height);
     }
 
-    YGWS(weakSelf);
+    __weak typeof(self) weakSelf = self;
     [UIView animateWithDuration:_scrollAnimationTime delay:_textStayTime options:UIViewAnimationOptionLayoutSubviews animations:^{
-        ScrollTextView *ws = weakSelf;
+        __strong typeof(weakSelf) ws = weakSelf;
         if (ws) {
             for (UILabel *lb in ws->_LabelArr) {
-                lb.frame_y = lb.frame_y - (lb.frame_height + ws->_lineSpace)*direction.integerValue;
+                CGFloat x = lb.frame.origin.x;
+                CGFloat width = lb.frame.size.width;
+                CGFloat height = lb.frame.size.height;
+                lb.frame = CGRectMake(x, lb.frame.origin.y - (lb.frame.size.height + ws->_lineSpace)*direction.integerValue, width, height);
             }
         }
     } completion:^(BOOL finished) {
-        ScrollTextView *ws = weakSelf;
+        __strong typeof(weakSelf) ws = weakSelf;
         if (ws) {
             ws->_index = [ws nextIndex:ws->_index];
             if (ws->_needStop) {

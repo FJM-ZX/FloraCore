@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1433AF0821705388000DBD74 /* ScrollTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1433AF0621705388000DBD74 /* ScrollTextView.m */; };
-		1433AF0B217053E7000DBD74 /* UIView+FrameExpanded.m in Sources */ = {isa = PBXBuildFile; fileRef = 1433AF0A217053E7000DBD74 /* UIView+FrameExpanded.m */; };
+		1433AF1B2170546D000DBD74 /* UIImage+CreateImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1433AF0E2170546D000DBD74 /* UIImage+CreateImage.m */; };
+		1433AF1C2170546D000DBD74 /* UIView+FrameExpanded.m in Sources */ = {isa = PBXBuildFile; fileRef = 1433AF112170546D000DBD74 /* UIView+FrameExpanded.m */; };
+		1433AF1D2170546D000DBD74 /* AdaptiveContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1433AF142170546D000DBD74 /* AdaptiveContainerView.m */; };
+		1433AF1E2170546D000DBD74 /* ScratchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1433AF162170546D000DBD74 /* ScratchView.m */; };
+		1433AF1F2170546D000DBD74 /* OdometerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1433AF172170546D000DBD74 /* OdometerView.m */; };
+		1433AF202170546D000DBD74 /* ScrollTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1433AF1A2170546D000DBD74 /* ScrollTextView.m */; };
+		1433AF2321707ADA000DBD74 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 1433AF2221707ADA000DBD74 /* NSString+MD5.m */; };
+		1433AF2621707BE3000DBD74 /* NSString+Trim.m in Sources */ = {isa = PBXBuildFile; fileRef = 1433AF2521707BE3000DBD74 /* NSString+Trim.m */; };
 		147B2FE0216F038100A6F95D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 147B2FDF216F038100A6F95D /* AppDelegate.m */; };
 		147B2FE3216F038100A6F95D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 147B2FE2216F038100A6F95D /* ViewController.m */; };
 		147B2FE6216F038100A6F95D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 147B2FE4216F038100A6F95D /* Main.storyboard */; };
@@ -17,10 +23,6 @@
 		147B2FEE216F038300A6F95D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 147B2FED216F038300A6F95D /* main.m */; };
 		147B2FF8216F038300A6F95D /* FloraCoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 147B2FF7216F038300A6F95D /* FloraCoreTests.m */; };
 		147B3003216F038300A6F95D /* FloraCoreUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 147B3002216F038300A6F95D /* FloraCoreUITests.m */; };
-		147B3016216F05E300A6F95D /* AdaptiveContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 147B3013216F05E300A6F95D /* AdaptiveContainerView.m */; };
-		147B3017216F05E300A6F95D /* OdometerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 147B3014216F05E300A6F95D /* OdometerView.m */; };
-		147B301A216F297400A6F95D /* ScratchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 147B3019216F297400A6F95D /* ScratchView.m */; };
-		147B301E216F34D800A6F95D /* UIImage+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 147B301D216F34D800A6F95D /* UIImage+Image.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,10 +43,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1433AF0621705388000DBD74 /* ScrollTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollTextView.m; sourceTree = "<group>"; };
-		1433AF0721705388000DBD74 /* ScrollTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollTextView.h; sourceTree = "<group>"; };
-		1433AF09217053E7000DBD74 /* UIView+FrameExpanded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FrameExpanded.h"; sourceTree = "<group>"; };
-		1433AF0A217053E7000DBD74 /* UIView+FrameExpanded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FrameExpanded.m"; sourceTree = "<group>"; };
+		1433AF0E2170546D000DBD74 /* UIImage+CreateImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+CreateImage.m"; sourceTree = "<group>"; };
+		1433AF0F2170546D000DBD74 /* UIView+FrameExpanded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FrameExpanded.h"; sourceTree = "<group>"; };
+		1433AF102170546D000DBD74 /* UIImage+CreateImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+CreateImage.h"; sourceTree = "<group>"; };
+		1433AF112170546D000DBD74 /* UIView+FrameExpanded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FrameExpanded.m"; sourceTree = "<group>"; };
+		1433AF132170546D000DBD74 /* OdometerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OdometerView.h; sourceTree = "<group>"; };
+		1433AF142170546D000DBD74 /* AdaptiveContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdaptiveContainerView.m; sourceTree = "<group>"; };
+		1433AF152170546D000DBD74 /* ScrollTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollTextView.h; sourceTree = "<group>"; };
+		1433AF162170546D000DBD74 /* ScratchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScratchView.m; sourceTree = "<group>"; };
+		1433AF172170546D000DBD74 /* OdometerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OdometerView.m; sourceTree = "<group>"; };
+		1433AF182170546D000DBD74 /* AdaptiveContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdaptiveContainerView.h; sourceTree = "<group>"; };
+		1433AF192170546D000DBD74 /* ScratchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScratchView.h; sourceTree = "<group>"; };
+		1433AF1A2170546D000DBD74 /* ScrollTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollTextView.m; sourceTree = "<group>"; };
+		1433AF2121707ADA000DBD74 /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
+		1433AF2221707ADA000DBD74 /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
+		1433AF2421707BE3000DBD74 /* NSString+Trim.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Trim.h"; sourceTree = "<group>"; };
+		1433AF2521707BE3000DBD74 /* NSString+Trim.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Trim.m"; sourceTree = "<group>"; };
 		147B2FDB216F038100A6F95D /* FloraCore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FloraCore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		147B2FDE216F038100A6F95D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		147B2FDF216F038100A6F95D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -61,14 +75,6 @@
 		147B2FFE216F038300A6F95D /* FloraCoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FloraCoreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		147B3002216F038300A6F95D /* FloraCoreUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FloraCoreUITests.m; sourceTree = "<group>"; };
 		147B3004216F038300A6F95D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		147B3012216F05E300A6F95D /* OdometerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OdometerView.h; sourceTree = "<group>"; };
-		147B3013216F05E300A6F95D /* AdaptiveContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdaptiveContainerView.m; sourceTree = "<group>"; };
-		147B3014216F05E300A6F95D /* OdometerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OdometerView.m; sourceTree = "<group>"; };
-		147B3015216F05E300A6F95D /* AdaptiveContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdaptiveContainerView.h; sourceTree = "<group>"; };
-		147B3018216F297400A6F95D /* ScratchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScratchView.h; sourceTree = "<group>"; };
-		147B3019216F297400A6F95D /* ScratchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScratchView.m; sourceTree = "<group>"; };
-		147B301C216F34D800A6F95D /* UIImage+Image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Image.h"; sourceTree = "<group>"; };
-		147B301D216F34D800A6F95D /* UIImage+Image.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Image.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,10 +102,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1433AF0C2170546D000DBD74 /* core */ = {
+			isa = PBXGroup;
+			children = (
+				1433AF0D2170546D000DBD74 /* category */,
+				1433AF122170546D000DBD74 /* component */,
+			);
+			path = core;
+			sourceTree = "<group>";
+		};
+		1433AF0D2170546D000DBD74 /* category */ = {
+			isa = PBXGroup;
+			children = (
+				1433AF2121707ADA000DBD74 /* NSString+MD5.h */,
+				1433AF2221707ADA000DBD74 /* NSString+MD5.m */,
+				1433AF102170546D000DBD74 /* UIImage+CreateImage.h */,
+				1433AF0E2170546D000DBD74 /* UIImage+CreateImage.m */,
+				1433AF0F2170546D000DBD74 /* UIView+FrameExpanded.h */,
+				1433AF112170546D000DBD74 /* UIView+FrameExpanded.m */,
+				1433AF2421707BE3000DBD74 /* NSString+Trim.h */,
+				1433AF2521707BE3000DBD74 /* NSString+Trim.m */,
+			);
+			path = category;
+			sourceTree = "<group>";
+		};
+		1433AF122170546D000DBD74 /* component */ = {
+			isa = PBXGroup;
+			children = (
+				1433AF152170546D000DBD74 /* ScrollTextView.h */,
+				1433AF1A2170546D000DBD74 /* ScrollTextView.m */,
+				1433AF132170546D000DBD74 /* OdometerView.h */,
+				1433AF172170546D000DBD74 /* OdometerView.m */,
+				1433AF182170546D000DBD74 /* AdaptiveContainerView.h */,
+				1433AF142170546D000DBD74 /* AdaptiveContainerView.m */,
+				1433AF192170546D000DBD74 /* ScratchView.h */,
+				1433AF162170546D000DBD74 /* ScratchView.m */,
+			);
+			path = component;
+			sourceTree = "<group>";
+		};
 		147B2FD2216F038100A6F95D = {
 			isa = PBXGroup;
 			children = (
-				147B3010216F03F400A6F95D /* core */,
+				1433AF0C2170546D000DBD74 /* core */,
 				147B2FDD216F038100A6F95D /* FloraCore */,
 				147B2FF6216F038300A6F95D /* FloraCoreTests */,
 				147B3001216F038300A6F95D /* FloraCoreUITests */,
@@ -149,41 +194,6 @@
 				147B3004216F038300A6F95D /* Info.plist */,
 			);
 			path = FloraCoreUITests;
-			sourceTree = "<group>";
-		};
-		147B3010216F03F400A6F95D /* core */ = {
-			isa = PBXGroup;
-			children = (
-				147B301B216F348100A6F95D /* category */,
-				147B3011216F05E300A6F95D /* component */,
-			);
-			path = core;
-			sourceTree = "<group>";
-		};
-		147B3011216F05E300A6F95D /* component */ = {
-			isa = PBXGroup;
-			children = (
-				1433AF0721705388000DBD74 /* ScrollTextView.h */,
-				1433AF0621705388000DBD74 /* ScrollTextView.m */,
-				147B3018216F297400A6F95D /* ScratchView.h */,
-				147B3019216F297400A6F95D /* ScratchView.m */,
-				147B3012216F05E300A6F95D /* OdometerView.h */,
-				147B3014216F05E300A6F95D /* OdometerView.m */,
-				147B3015216F05E300A6F95D /* AdaptiveContainerView.h */,
-				147B3013216F05E300A6F95D /* AdaptiveContainerView.m */,
-			);
-			path = component;
-			sourceTree = "<group>";
-		};
-		147B301B216F348100A6F95D /* category */ = {
-			isa = PBXGroup;
-			children = (
-				1433AF09217053E7000DBD74 /* UIView+FrameExpanded.h */,
-				1433AF0A217053E7000DBD74 /* UIView+FrameExpanded.m */,
-				147B301C216F34D800A6F95D /* UIImage+Image.h */,
-				147B301D216F34D800A6F95D /* UIImage+Image.m */,
-			);
-			path = category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,14 +326,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				147B3017216F05E300A6F95D /* OdometerView.m in Sources */,
-				147B301A216F297400A6F95D /* ScratchView.m in Sources */,
-				1433AF0821705388000DBD74 /* ScrollTextView.m in Sources */,
+				1433AF1E2170546D000DBD74 /* ScratchView.m in Sources */,
 				147B2FE3216F038100A6F95D /* ViewController.m in Sources */,
+				1433AF2321707ADA000DBD74 /* NSString+MD5.m in Sources */,
+				1433AF2621707BE3000DBD74 /* NSString+Trim.m in Sources */,
+				1433AF1B2170546D000DBD74 /* UIImage+CreateImage.m in Sources */,
+				1433AF1F2170546D000DBD74 /* OdometerView.m in Sources */,
+				1433AF202170546D000DBD74 /* ScrollTextView.m in Sources */,
+				1433AF1C2170546D000DBD74 /* UIView+FrameExpanded.m in Sources */,
 				147B2FEE216F038300A6F95D /* main.m in Sources */,
-				147B301E216F34D800A6F95D /* UIImage+Image.m in Sources */,
-				1433AF0B217053E7000DBD74 /* UIView+FrameExpanded.m in Sources */,
-				147B3016216F05E300A6F95D /* AdaptiveContainerView.m in Sources */,
+				1433AF1D2170546D000DBD74 /* AdaptiveContainerView.m in Sources */,
 				147B2FE0216F038100A6F95D /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -430,7 +442,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -483,7 +495,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
