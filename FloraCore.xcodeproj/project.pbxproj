@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1433AF0821705388000DBD74 /* ScrollTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1433AF0621705388000DBD74 /* ScrollTextView.m */; };
+		1433AF0B217053E7000DBD74 /* UIView+FrameExpanded.m in Sources */ = {isa = PBXBuildFile; fileRef = 1433AF0A217053E7000DBD74 /* UIView+FrameExpanded.m */; };
 		147B2FE0216F038100A6F95D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 147B2FDF216F038100A6F95D /* AppDelegate.m */; };
 		147B2FE3216F038100A6F95D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 147B2FE2216F038100A6F95D /* ViewController.m */; };
 		147B2FE6216F038100A6F95D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 147B2FE4216F038100A6F95D /* Main.storyboard */; };
@@ -39,6 +41,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1433AF0621705388000DBD74 /* ScrollTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollTextView.m; sourceTree = "<group>"; };
+		1433AF0721705388000DBD74 /* ScrollTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollTextView.h; sourceTree = "<group>"; };
+		1433AF09217053E7000DBD74 /* UIView+FrameExpanded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FrameExpanded.h"; sourceTree = "<group>"; };
+		1433AF0A217053E7000DBD74 /* UIView+FrameExpanded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FrameExpanded.m"; sourceTree = "<group>"; };
 		147B2FDB216F038100A6F95D /* FloraCore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FloraCore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		147B2FDE216F038100A6F95D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		147B2FDF216F038100A6F95D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -157,6 +163,8 @@
 		147B3011216F05E300A6F95D /* component */ = {
 			isa = PBXGroup;
 			children = (
+				1433AF0721705388000DBD74 /* ScrollTextView.h */,
+				1433AF0621705388000DBD74 /* ScrollTextView.m */,
 				147B3018216F297400A6F95D /* ScratchView.h */,
 				147B3019216F297400A6F95D /* ScratchView.m */,
 				147B3012216F05E300A6F95D /* OdometerView.h */,
@@ -170,6 +178,8 @@
 		147B301B216F348100A6F95D /* category */ = {
 			isa = PBXGroup;
 			children = (
+				1433AF09217053E7000DBD74 /* UIView+FrameExpanded.h */,
+				1433AF0A217053E7000DBD74 /* UIView+FrameExpanded.m */,
 				147B301C216F34D800A6F95D /* UIImage+Image.h */,
 				147B301D216F34D800A6F95D /* UIImage+Image.m */,
 			);
@@ -308,9 +318,11 @@
 			files = (
 				147B3017216F05E300A6F95D /* OdometerView.m in Sources */,
 				147B301A216F297400A6F95D /* ScratchView.m in Sources */,
+				1433AF0821705388000DBD74 /* ScrollTextView.m in Sources */,
 				147B2FE3216F038100A6F95D /* ViewController.m in Sources */,
 				147B2FEE216F038300A6F95D /* main.m in Sources */,
 				147B301E216F34D800A6F95D /* UIImage+Image.m in Sources */,
+				1433AF0B217053E7000DBD74 /* UIView+FrameExpanded.m in Sources */,
 				147B3016216F05E300A6F95D /* AdaptiveContainerView.m in Sources */,
 				147B2FE0216F038100A6F95D /* AppDelegate.m in Sources */,
 			);
