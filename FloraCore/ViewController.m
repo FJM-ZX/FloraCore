@@ -57,11 +57,17 @@
     stv.textDataArr = @[@"ScrollTextView test1",@"ScrollTextView test2",@"ScrollTextView test3"];
     [stv startScrollBottomToTopWithNoSpace];
     
-    UIImageView *createImg = [[UIImageView alloc] initWithImage:[UIImage ClipCircleImageWithImage:[UIImage imageWithSize:CGSizeMake(100, 100) radious:0 startHColor:[UIColor redColor] midHColor:[UIColor greenColor] endHColor:[UIColor blueColor]] circleSize:CGSizeMake(100, 100) borderWidth:4 borderColor:[[UIColor blackColor] colorWithAlphaComponent:0.2]]];
+    UIImageView *createImg = [[UIImageView alloc] initWithImage:[UIImage ClipCircleImageWithImage:[UIImage imageWithSize:CGSizeMake(100, 100) radius:0 startHColor:[UIColor redColor] midHColor:[UIColor greenColor] endHColor:[UIColor blueColor]] circleSize:CGSizeMake(100, 100) borderWidth:4 borderColor:[[UIColor blackColor] colorWithAlphaComponent:0.2]]];
     createImg.y = 130;
     createImg.center_x = self.view.center_x;
     [self.view addSubview:createImg];
     
+    
+    UIImage *img = [UIImage imageWithSize:CGSizeMake(100, 40) radius:0 startVColor:[UIColor redColor] endVColor:[UIColor blackColor]];
+    UIImageView *createImg2 = [[UIImageView alloc] initWithImage:[UIImage ClipRoundCornerImageWithImage:img size:img.size radius:20 imageRoundCornerDirection:ImageRoundCornerTopRight|ImageRoundCornerBottomLeft]];
+    createImg2.y = 250;
+    createImg2.center_x = self.view.center_x;
+    [self.view addSubview:createImg2];
 }
 -(void)fingerTappedOV:(id)sender{
 //    [AdaptiveContainerView addTipsForView:odometerView content:@"this is odometer view!" afterDelay:3];

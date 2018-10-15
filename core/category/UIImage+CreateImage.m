@@ -16,16 +16,16 @@ CGFloat RadiansToDegrees(CGFloat radians) {return radians * 180/M_PI;};
     return [UIImage imageWithColor:color size:CGSizeMake(1, 1)];
 }
 + (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size{
-    return [UIImage imageWithColor:color size:size radious:0.0f];
+    return [UIImage imageWithColor:color size:size radius:0.0f];
 }
-+ (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size radious:(CGFloat) radious{
-    return [UIImage imageWithColor:color size:size radious:radious borderWidth:0.0f borderColor:[UIColor clearColor]];
++ (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size radius:(CGFloat) radius{
+    return [UIImage imageWithColor:color size:size radius:radius borderWidth:0.0f borderColor:[UIColor clearColor]];
 }
-+ (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size radious:(CGFloat)radious borderWidth:(CGFloat)borderW borderColor:(UIColor *)borderColor{
++ (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size radius:(CGFloat)radius borderWidth:(CGFloat)borderW borderColor:(UIColor *)borderColor{
     CGFloat *p = nil;
-    return [UIImage imageWithColor:color size:size radious:radious borderWidth:borderW borderColor:borderColor borderLineDash:p borderLineDashCount:0];
+    return [UIImage imageWithColor:color size:size radius:radius borderWidth:borderW borderColor:borderColor borderLineDash:p borderLineDashCount:0];
 }
-+ (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size radious:(CGFloat) radious borderWidth:(CGFloat)borderW borderColor:(UIColor *)borderColor borderLineDash:(CGFloat *)lineDash borderLineDashCount:(int)lineDashCount{
++ (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size radius:(CGFloat) radius borderWidth:(CGFloat)borderW borderColor:(UIColor *)borderColor borderLineDash:(CGFloat *)lineDash borderLineDashCount:(int)lineDashCount{
     UIGraphicsBeginImageContextWithOptions(size, NO, 0);
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextSetFillColorWithColor(context, [color CGColor]);
@@ -36,8 +36,8 @@ CGFloat RadiansToDegrees(CGFloat radians) {return radians * 180/M_PI;};
             CGContextSetLineDash(context, 0, lineDash, lineDashCount);
         }
     }
-    if(radious>0){
-        UIBezierPath * path = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(borderW/2.0, borderW/2.0, size.width - borderW, size.height - borderW) cornerRadius:radious];
+    if(radius>0){
+        UIBezierPath * path = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(borderW/2.0, borderW/2.0, size.width - borderW, size.height - borderW) cornerRadius:radius];
         [path fill];
         if (borderW>0) [path stroke];
     }else{
@@ -51,38 +51,38 @@ CGFloat RadiansToDegrees(CGFloat radians) {return radians * 180/M_PI;};
     return image;
 }
 
-+ (UIImage *)imageWithSize:(CGSize)size radious:(CGFloat) radious startVColor:(UIColor*)startColor
++ (UIImage *)imageWithSize:(CGSize)size radius:(CGFloat)radius startVColor:(UIColor*)startColor
                  endVColor:(UIColor*)endColor{
-    return [UIImage imageWithSize:size radious:radious startColor:startColor endColor:endColor isH:YES];
+    return [UIImage imageWithSize:size radius:radius startColor:startColor endColor:endColor isH:YES];
 }
-+ (UIImage *)imageWithSize:(CGSize)size radious:(CGFloat) radious startHColor:(UIColor*)startColor
++ (UIImage *)imageWithSize:(CGSize)size radius:(CGFloat)radius startHColor:(UIColor*)startColor
                  endHColor:(UIColor*)endColor{
-    return [UIImage imageWithSize:size radious:radious startColor:startColor endColor:endColor isH:NO];
+    return [UIImage imageWithSize:size radius:radius startColor:startColor endColor:endColor isH:NO];
 }
-+ (UIImage *)imageWithSize:(CGSize)size radious:(CGFloat) radious startColor:(UIColor*)startColor
++ (UIImage *)imageWithSize:(CGSize)size radius:(CGFloat)radius startColor:(UIColor*)startColor
                   endColor:(UIColor*)endColor isH:(BOOL)isH{
     CGFloat locations[] = { 0.0, 1.0 };
     NSArray *colors = @[(__bridge id) [startColor CGColor], (__bridge id) [endColor CGColor]];
-    return [UIImage imageWithSize:size radious:radious colors:colors locations:locations isH:isH];
+    return [UIImage imageWithSize:size radius:radius colors:colors locations:locations isH:isH];
 }
-+ (UIImage *)imageWithSize:(CGSize)size radious:(CGFloat) radious startVColor:(UIColor*)startColor midVColor:(UIColor*)midColor
++ (UIImage *)imageWithSize:(CGSize)size radius:(CGFloat) radius startVColor:(UIColor*)startColor midVColor:(UIColor*)midColor
                  endVColor:(UIColor*)endColor{
-    return [UIImage imageWithSize:size radious:radious startColor:startColor midColor:midColor endColor:endColor isH:NO];
+    return [UIImage imageWithSize:size radius:radius startColor:startColor midColor:midColor endColor:endColor isH:NO];
 }
-+ (UIImage *)imageWithSize:(CGSize)size radious:(CGFloat) radious startHColor:(UIColor*)startColor midHColor:(UIColor*)midColor
++ (UIImage *)imageWithSize:(CGSize)size radius:(CGFloat) radius startHColor:(UIColor*)startColor midHColor:(UIColor*)midColor
                  endHColor:(UIColor*)endColor{
-    return [UIImage imageWithSize:size radious:radious startColor:startColor midColor:midColor endColor:endColor isH:YES];
+    return [UIImage imageWithSize:size radius:radius startColor:startColor midColor:midColor endColor:endColor isH:YES];
 }
-+ (UIImage *)imageWithSize:(CGSize)size radious:(CGFloat) radious startColor:(UIColor*)startColor midColor:(UIColor*)midColor
++ (UIImage *)imageWithSize:(CGSize)size radius:(CGFloat) radius startColor:(UIColor*)startColor midColor:(UIColor*)midColor
                   endColor:(UIColor*)endColor isH:(BOOL)isH{
     CGFloat locations[] = { 0.0, 0.5, 1.0 };
     NSArray *colors = @[(__bridge id) [startColor CGColor], (__bridge id) [midColor CGColor], (__bridge id) [endColor CGColor]];
-    return [UIImage imageWithSize:size radious:radious colors:colors locations:locations isH:isH];
+    return [UIImage imageWithSize:size radius:radius colors:colors locations:locations isH:isH];
 }
-+ (UIImage *)imageWithSize:(CGSize)size radious:(CGFloat) radious colors:(NSArray *)colors locations:(CGFloat *)locations isH:(BOOL)isH{
++ (UIImage *)imageWithSize:(CGSize)size radius:(CGFloat) radius colors:(NSArray *)colors locations:(CGFloat *)locations isH:(BOOL)isH{
     UIGraphicsBeginImageContextWithOptions(size, NO, 0);
     CGContextRef context = UIGraphicsGetCurrentContext();
-    UIBezierPath * path = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, 0, size.width, size.height) cornerRadius:radious];
+    UIBezierPath * path = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, 0, size.width, size.height) cornerRadius:radius];
     CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
     CGGradientRef gradient = CGGradientCreateWithColors(colorSpace, (__bridge CFArrayRef) colors, locations);
     CGRect pathRect = CGPathGetBoundingBox([path CGPath]);
@@ -126,15 +126,52 @@ CGFloat RadiansToDegrees(CGFloat radians) {return radians * 180/M_PI;};
     
 }
 //裁剪图片 可设置圆角
-+ (UIImage *)ClipImageWithImage:(UIImage *)image circleSize:(CGSize)size radious:(CGFloat) radious{
-    UIBezierPath * path = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, 0, size.width, size.height) cornerRadius:radious];
++ (UIImage *)ClipRoundedImageRectWithImage:(UIImage *)image size:(CGSize)size radius:(CGFloat)radius{
+    UIBezierPath * path = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, 0, size.width, size.height) cornerRadius:radius];
     return  [UIImage ClipImagePathWithImage:image path:path borderWith:0 borderColor:[UIColor clearColor]];
 }
 //裁剪带边框的图片 可设置圆角 边框颜色
-+(UIImage *)ClipImageRadiousWithImage:(UIImage *)image circleSize:(CGSize)size radious:(CGFloat)radious borderWith:(CGFloat)borderW borderColor:( UIColor *)borderColor{
-    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(borderW * 0.5 , borderW * 0.5 , size.width - borderW, size.height - borderW) cornerRadius:radious];
++(UIImage *)ClipRoundedImageRectWithImage:(UIImage *)image size:(CGSize)size radius:(CGFloat)radius borderWith:(CGFloat)borderW borderColor:( UIColor *)borderColor{
+    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(borderW * 0.5 , borderW * 0.5 , size.width - borderW, size.height - borderW) cornerRadius:radius];
     return  [UIImage ClipImagePathWithImage:image path:path borderWith:borderW borderColor:borderColor];
 }
+//裁剪图片 分别设置圆角
++ (UIImage *)ClipRoundCornerImageWithImage:(UIImage *)image size:(CGSize)size radius:(CGFloat) radius imageRoundCornerDirection:(ImageRoundCornerDirection)direction{
+    return  [UIImage ClipRoundCornerImageWithImage:image size:size radius:radius imageRoundCornerDirection:direction borderWith:0 borderColor:[UIColor clearColor]];
+}
+//裁剪带边框的图片 可设置圆角 边框颜色
++(UIImage *)ClipRoundCornerImageWithImage:(UIImage *)image size:(CGSize)size radius:(CGFloat)radius imageRoundCornerDirection:(ImageRoundCornerDirection)direction borderWith:(CGFloat)borderW borderColor:( UIColor *)borderColor{
+    UIBezierPath * path;
+    if (direction == ImageRoundCornerNull) {
+        path = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, 0, size.width, size.height) cornerRadius:radius];
+    }else{
+        path = [UIBezierPath bezierPath];
+        [path moveToPoint:CGPointMake(0, size.height/2)];
+        if((direction & ImageRoundCornerTopLeft) > 0) {
+            [path addArcWithCenter:CGPointMake(radius, radius) radius:radius startAngle:M_PI endAngle:3*M_PI/2 clockwise:YES];
+        }else{
+            [path addLineToPoint:CGPointZero];
+        }
+        if((direction & ImageRoundCornerTopRight) > 0) {
+            [path addArcWithCenter:CGPointMake(size.width - radius, radius) radius:radius startAngle:3*M_PI/2 endAngle:2*M_PI clockwise:YES];
+        }else{
+            [path addLineToPoint:CGPointMake(size.width, 0)];
+        }
+        if((direction & ImageRoundCornerBottomRight) > 0) {
+            [path addArcWithCenter:CGPointMake(size.width - radius, size.height - radius) radius:radius startAngle:0 endAngle:M_PI/2 clockwise:YES];
+        }else{
+            [path addLineToPoint:CGPointMake(size.width, size.height)];
+        }
+        if((direction & ImageRoundCornerBottomLeft) > 0) {
+            [path addArcWithCenter:CGPointMake(radius, size.height - radius) radius:radius startAngle:M_PI/2 endAngle:M_PI clockwise:YES];
+        }else{
+            [path addLineToPoint:CGPointMake(0, size.height)];
+        }
+        [path closePath];
+    }
+    return  [UIImage ClipImagePathWithImage:image path:path borderWith:borderW borderColor:borderColor];
+}
+
 //按路径裁剪带边框的图片
 +(UIImage *)ClipImagePathWithImage:(UIImage *)image path:(UIBezierPath *)path borderWith:(CGFloat)borderW borderColor:( UIColor *)borderColor{
     borderW = borderW<0 ? -borderW : borderW;

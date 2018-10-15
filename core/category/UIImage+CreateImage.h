@@ -10,32 +10,52 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+
+/*角方向
+- ImageRoundCornerNull: 没有
+- ImageRoundCornerTopLeft:        上 -- 左
+- ImageRoundCornerTopRight:      上 -- 中
+- ImageRoundCornerBottomLeft:     下 -- 左
+- ImageRoundCornerBottomRight:    下 -- 右
+*/
+typedef NS_ENUM(NSInteger, ImageRoundCornerDirection) {
+    ImageRoundCornerNull        = 0x0000,
+    ImageRoundCornerTopLeft     = 0x0001,
+    ImageRoundCornerTopRight    = 0x0010,
+    ImageRoundCornerBottomLeft  = 0x0100,
+    ImageRoundCornerBottomRight = 0x1000,
+};
+
 @interface UIImage (CreateImage)
 //根据颜色生成图片
 + (UIImage *)imageWithColor:(UIColor *)color;
 + (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size;
-+ (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size radious:(CGFloat) radious;
-+ (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size radious:(CGFloat) radious borderWidth:(CGFloat)borderW borderColor:( UIColor *)borderColor;
-+ (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size radious:(CGFloat) radious borderWidth:(CGFloat)borderW borderColor:(UIColor *)borderColor borderLineDash:(double *)lineDash borderLineDashCount:(int)lineDashCount;
++ (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size radius:(CGFloat) radius;
++ (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size radius:(CGFloat) radius borderWidth:(CGFloat)borderW borderColor:( UIColor *)borderColor;
++ (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size radius:(CGFloat) radius borderWidth:(CGFloat)borderW borderColor:(UIColor *)borderColor borderLineDash:(double *)lineDash borderLineDashCount:(int)lineDashCount;
 
 //根据渐变颜色生成图片
-+ (UIImage *)imageWithSize:(CGSize)size radious:(CGFloat)radious startVColor:(UIColor*)startColor endVColor:(UIColor*)endColor;
-+ (UIImage *)imageWithSize:(CGSize)size radious:(CGFloat)radious startVColor:(UIColor*)startColor midVColor:(UIColor*)midColor endVColor:(UIColor*)endColor;
-+ (UIImage *)imageWithSize:(CGSize)size radious:(CGFloat)radious startHColor:(UIColor*)startColor endHColor:(UIColor*)endColor;
-+ (UIImage *)imageWithSize:(CGSize)size radious:(CGFloat)radious startHColor:(UIColor*)startColor midHColor:(UIColor*)midColor endHColor:(UIColor*)endColor;
++ (UIImage *)imageWithSize:(CGSize)size radius:(CGFloat)radius startVColor:(UIColor*)startColor endVColor:(UIColor*)endColor;
++ (UIImage *)imageWithSize:(CGSize)size radius:(CGFloat)radius startVColor:(UIColor*)startColor midVColor:(UIColor*)midColor endVColor:(UIColor*)endColor;
++ (UIImage *)imageWithSize:(CGSize)size radius:(CGFloat)radius startHColor:(UIColor*)startColor endHColor:(UIColor*)endColor;
++ (UIImage *)imageWithSize:(CGSize)size radius:(CGFloat)radius startHColor:(UIColor*)startColor midHColor:(UIColor*)midColor endHColor:(UIColor*)endColor;
 
-+ (UIImage *)imageWithSize:(CGSize)size radious:(CGFloat) radious startColor:(UIColor*)startColor endColor:(UIColor*)endColor isH:(BOOL)isH;
-+ (UIImage *)imageWithSize:(CGSize)size radious:(CGFloat) radious startColor:(UIColor*)startColor midColor:(UIColor*)midColor endColor:(UIColor*)endColor isH:(BOOL)isH;
-+ (UIImage *)imageWithSize:(CGSize)size radious:(CGFloat) radious colors:(NSArray *)colors locations:(CGFloat *)locations isH:(BOOL)isH;
++ (UIImage *)imageWithSize:(CGSize)size radius:(CGFloat)radius startColor:(UIColor*)startColor endColor:(UIColor*)endColor isH:(BOOL)isH;
++ (UIImage *)imageWithSize:(CGSize)size radius:(CGFloat)radius startColor:(UIColor*)startColor midColor:(UIColor*)midColor endColor:(UIColor*)endColor isH:(BOOL)isH;
++ (UIImage *)imageWithSize:(CGSize)size radius:(CGFloat)radius colors:(NSArray *)colors locations:(CGFloat *)locations isH:(BOOL)isH;
 
 //裁剪圆形图片
 + (UIImage *)ClipCircleImageWithImage:(UIImage *)image circleSize:(CGSize)size;
 //裁剪带边框的圆形图片
 + (UIImage *)ClipCircleImageWithImage:(UIImage *)image circleSize:(CGSize)size borderWidth:(CGFloat)borderW borderColor:( UIColor *)borderColor;
 //裁剪图片自定义圆角
-+ (UIImage *)ClipImageWithImage:(UIImage *)image circleSize:(CGSize)size radious:(CGFloat) radious;
++ (UIImage *)ClipRoundedImageRectWithImage:(UIImage *)image size:(CGSize)size radius:(CGFloat)radius;
 //裁剪带边框的图片 可设置圆角 边框颜色
-+(UIImage *)ClipImageRadiousWithImage:(UIImage *)image circleSize:(CGSize)size radious:(CGFloat)radious borderWith:(CGFloat)borderW borderColor:( UIColor *)borderColor;
++(UIImage *)ClipRoundedImageRectWithImage:(UIImage *)image size:(CGSize)size radius:(CGFloat)radius borderWith:(CGFloat)borderW borderColor:( UIColor *)borderColor;
+//裁剪图片 分别设置圆角
++ (UIImage *)ClipRoundCornerImageWithImage:(UIImage *)image size:(CGSize)size radius:(CGFloat)radius imageRoundCornerDirection:(ImageRoundCornerDirection)direction;
+//裁剪带边框的图片 可设置圆角 边框颜色
++(UIImage *)ClipRoundCornerImageWithImage:(UIImage *)image size:(CGSize)size radius:(CGFloat)radius imageRoundCornerDirection:(ImageRoundCornerDirection)direction borderWith:(CGFloat)borderW borderColor:( UIColor *)borderColor;
 //按路径裁剪带边框的图片
 +(UIImage *)ClipImagePathWithImage:(UIImage *)image path:(UIBezierPath *)path borderWith:(CGFloat)borderW borderColor:( UIColor *)borderColor;
 
