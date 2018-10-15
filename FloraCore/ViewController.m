@@ -73,14 +73,15 @@
     
     
     UIImage *ProgressBarImg = [UIImage imageWithSize:CGSizeMake(20, 20) radius:0 startHColor:[UIColor redColor] endHColor:[UIColor blackColor]];
-    pgV = [[ProgressView alloc] initWithFrame:CGRectMake(0, 300, 200, 20)];
+    pgV = [[ProgressView alloc] initWithFrame:CGRectMake(0, 300, 300, 20)];
+//    pgV.frame = CGRectMake(0, 300, 300, 20);
     pgV.center_x = self.view.center_x;
-    pgV.roundCornerRadius = 6;
+    pgV.roundCornerRadius = 10;
     pgV.isRoundCornerBar = YES;
     pgV.isScaleBar = YES;
     pgV.progressBar = [[UIImageView alloc] initWithImage:ProgressBarImg];
     [self.view addSubview:pgV];
-    [pgV updateProgress:0.5];
+    [pgV updateProgress:0.0];
     [pgV setProgressLabel:@"ProgressView"];
     
     UISlider * slider = [[UISlider alloc]initWithFrame:CGRectMake(0 , 330, 200, 50)];
@@ -98,6 +99,7 @@
     [slider addTarget:self action:@selector(sliderValueChanged:) forControlEvents:UIControlEventValueChanged];
 }
 -(void)fingerTappedOV:(id)sender{
+    [pgV updateProgress:0.5 isAnimation:YES];
 //    [AdaptiveContainerView addTipsForView:odometerView content:@"this is odometer view!" afterDelay:3];
     
     UIView * scratchViewTV = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 200, 100)];
@@ -135,7 +137,7 @@
 
 -(void)sliderValueChanged:(UISlider *)slider
 {
-    [pgV updateProgress:slider.value];
+    [pgV updateProgress:slider.value isAnimation:YES];
     [pgV setProgressLabel:[NSString stringWithFormat:@"slider value%f",slider.value]];
 }
 @end

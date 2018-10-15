@@ -17,7 +17,13 @@
 
 @end
 @implementation ProgressView
-
+- (instancetype)init{
+    self = [super init];
+    if (self) {
+        [self commonInit];
+    }
+    return self;
+}
 - (instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
@@ -25,13 +31,23 @@
     }
     return self;
 }
+- (void)setFrame:(CGRect)frame{
+    [super setFrame:frame];
+    viewFrame = frame;
+    viewFrame.origin.x = viewFrame.origin.y = 0;
+    if (progressBackgroundTmp) {
+        progressBackgroundTmp.frame = viewFrame;
+        progressBackLb.frame = viewFrame;
+        progressBarTmp.frame = viewFrame;
+        progressBarLb.frame = viewFrame;
+    }
+}
+
 - (void)commonInit
 {
     _isScaleBar = NO;
     _roundCornerRadius = 0;
     _isRoundCornerBar = NO;
-    viewFrame = self.frame;
-    viewFrame.origin.x = viewFrame.origin.y = 0;
     _font = [UIFont systemFontOfSize:[UIFont systemFontSize]];
     
     progressBackgroundTmp = [[UIView alloc] initWithFrame:viewFrame];
@@ -134,7 +150,7 @@
     if (isAnim) {
         [progressBarTmp.layer removeAllAnimations];
         [_progressBar.layer removeAllAnimations];
-        [UIView animateWithDuration:0.2 animations:^{
+        [UIView animateWithDuration:0.3 animations:^{
             __strong typeof(weakSelf) ws = weakSelf;
             CGRect frame = ws->progressBarTmp.frame;
             frame.size.width = ws->viewFrame.size.width * progress;
@@ -142,7 +158,7 @@
             if (ws->_isScaleBar) {
                 ws->_progressBar.frame = ws->progressBarTmp.frame;
             }else{
-                ws->_progressBar.frame = ws.frame;
+                ws->_progressBar.frame = ws->viewFrame;
             }
         }];
     }else{
