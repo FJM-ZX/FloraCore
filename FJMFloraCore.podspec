@@ -16,8 +16,8 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "FJMFloraCore"
-  s.version      = "1.1.0"
-  s.summary      = "FJMFloraCore have some object-c component"
+  s.version      = "1.2.0"
+  s.summary      = "object-c component and category"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-  some object-c component and category
+  FJMFloraCore have some object-c component and category
                    DESC
 
   s.homepage     = "https://github.com/FJM-ZX/FloraCore"

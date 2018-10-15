@@ -11,6 +11,7 @@
 #import "AdaptiveContainerView.h"
 #import "ScratchView.h"
 #import "ScrollTextView.h"
+#import "ProgressView.h"
 
 #import "UIImage+CreateImage.h"
 #import "UIView+FrameExpanded.h"
@@ -18,6 +19,7 @@
 
 @interface ViewController ()<ScratchViewDelegate>{
     OdometerView * odometerView;
+    ProgressView *pgV;
     float randomValue;
 }
 
@@ -64,10 +66,36 @@
     
     
     UIImage *img = [UIImage imageWithSize:CGSizeMake(100, 40) radius:0 startVColor:[UIColor redColor] endVColor:[UIColor blackColor]];
-    UIImageView *createImg2 = [[UIImageView alloc] initWithImage:[UIImage ClipRoundCornerImageWithImage:img size:img.size radius:20 imageRoundCornerDirection:ImageRoundCornerTopRight|ImageRoundCornerBottomLeft]];
+    UIImageView *createImg2 = [[UIImageView alloc] initWithImage:[UIImage ClipRoundCornerImageWithImage:img size:img.size radius:20 imageRoundCornerDirection:ImageRoundCornerTopRight|ImageRoundCornerTopLeft|ImageRoundCornerBottomRight]];
     createImg2.y = 250;
     createImg2.center_x = self.view.center_x;
     [self.view addSubview:createImg2];
+    
+    
+    UIImage *ProgressBarImg = [UIImage imageWithSize:CGSizeMake(20, 20) radius:0 startHColor:[UIColor redColor] endHColor:[UIColor blackColor]];
+    pgV = [[ProgressView alloc] initWithFrame:CGRectMake(0, 300, 200, 20)];
+    pgV.center_x = self.view.center_x;
+    pgV.roundCornerRadius = 6;
+    pgV.isRoundCornerBar = YES;
+    pgV.isScaleBar = YES;
+    pgV.progressBar = [[UIImageView alloc] initWithImage:ProgressBarImg];
+    [self.view addSubview:pgV];
+    [pgV updateProgress:0.5];
+    [pgV setProgressLabel:@"ProgressView"];
+    
+    UISlider * slider = [[UISlider alloc]initWithFrame:CGRectMake(0 , 330, 200, 50)];
+    slider.center_x = self.view.center_x;
+    slider.minimumValue = 0.0;
+    slider.maximumValue = 1.0;
+    slider.value = 0.5;
+    
+    [slider setContinuous:YES];
+    slider.minimumTrackTintColor = [UIColor redColor];
+    slider.maximumTrackTintColor = [UIColor blueColor];
+    slider.thumbTintColor = [UIColor yellowColor];
+    [self.view addSubview:slider];
+    
+    [slider addTarget:self action:@selector(sliderValueChanged:) forControlEvents:UIControlEventValueChanged];
 }
 -(void)fingerTappedOV:(id)sender{
 //    [AdaptiveContainerView addTipsForView:odometerView content:@"this is odometer view!" afterDelay:3];
@@ -103,5 +131,11 @@
 #pragma mark --- SIScratchViewDelegate
 - (void)scratchViewDidOpen:(ScratchView *)scratchView{
     [odometerView setupNumber:@(randomValue)];
+}
+
+-(void)sliderValueChanged:(UISlider *)slider
+{
+    [pgV updateProgress:slider.value];
+    [pgV setProgressLabel:[NSString stringWithFormat:@"slider value%f",slider.value]];
 }
 @end

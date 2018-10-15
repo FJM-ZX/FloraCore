@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 /*角方向
 - ImageRoundCornerNull: 没有
 - ImageRoundCornerTopLeft:        上 -- 左
-- ImageRoundCornerTopRight:      上 -- 中
+- ImageRoundCornerTopRight:      上 -- 右
 - ImageRoundCornerBottomLeft:     下 -- 左
 - ImageRoundCornerBottomRight:    下 -- 右
 */
@@ -49,18 +49,18 @@ typedef NS_ENUM(NSInteger, ImageRoundCornerDirection) {
 //裁剪带边框的圆形图片
 + (UIImage *)ClipCircleImageWithImage:(UIImage *)image circleSize:(CGSize)size borderWidth:(CGFloat)borderW borderColor:( UIColor *)borderColor;
 //裁剪图片自定义圆角
-+ (UIImage *)ClipRoundedImageRectWithImage:(UIImage *)image size:(CGSize)size radius:(CGFloat)radius;
++ (UIImage *)ClipRoundRectImageWithImage:(UIImage *)image size:(CGSize)size radius:(CGFloat)radius;
 //裁剪带边框的图片 可设置圆角 边框颜色
-+(UIImage *)ClipRoundedImageRectWithImage:(UIImage *)image size:(CGSize)size radius:(CGFloat)radius borderWith:(CGFloat)borderW borderColor:( UIColor *)borderColor;
++ (UIImage *)ClipRoundRectImageWithImage:(UIImage *)image size:(CGSize)size radius:(CGFloat)radius borderWith:(CGFloat)borderW borderColor:( UIColor *)borderColor;
 //裁剪图片 分别设置圆角
 + (UIImage *)ClipRoundCornerImageWithImage:(UIImage *)image size:(CGSize)size radius:(CGFloat)radius imageRoundCornerDirection:(ImageRoundCornerDirection)direction;
 //裁剪带边框的图片 可设置圆角 边框颜色
-+(UIImage *)ClipRoundCornerImageWithImage:(UIImage *)image size:(CGSize)size radius:(CGFloat)radius imageRoundCornerDirection:(ImageRoundCornerDirection)direction borderWith:(CGFloat)borderW borderColor:( UIColor *)borderColor;
++ (UIImage *)ClipRoundCornerImageWithImage:(UIImage *)image size:(CGSize)size radius:(CGFloat)radius imageRoundCornerDirection:(ImageRoundCornerDirection)direction borderWith:(CGFloat)borderW borderColor:( UIColor *)borderColor;
 //按路径裁剪带边框的图片
-+(UIImage *)ClipImagePathWithImage:(UIImage *)image path:(UIBezierPath *)path borderWith:(CGFloat)borderW borderColor:( UIColor *)borderColor;
++ (UIImage *)ClipImagePathWithImage:(UIImage *)image path:(UIBezierPath *)path borderWith:(CGFloat)borderW borderColor:( UIColor *)borderColor;
 
 //图片缩小到固定的size
--(UIImage*)scaleToSize:(CGSize)size;
+- (UIImage*)scaleToSize:(CGSize)size;
 - (UIImage *)imageRotatedByRadians:(CGFloat)radians;
 - (UIImage *)imageRotatedByDegrees:(CGFloat)degrees;
 - (UIImage*)mergeImage:(UIImage*)img;

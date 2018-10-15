@@ -126,12 +126,12 @@ CGFloat RadiansToDegrees(CGFloat radians) {return radians * 180/M_PI;};
     
 }
 //裁剪图片 可设置圆角
-+ (UIImage *)ClipRoundedImageRectWithImage:(UIImage *)image size:(CGSize)size radius:(CGFloat)radius{
++ (UIImage *)ClipRoundRectImageWithImage:(UIImage *)image size:(CGSize)size radius:(CGFloat)radius{
     UIBezierPath * path = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, 0, size.width, size.height) cornerRadius:radius];
     return  [UIImage ClipImagePathWithImage:image path:path borderWith:0 borderColor:[UIColor clearColor]];
 }
 //裁剪带边框的图片 可设置圆角 边框颜色
-+(UIImage *)ClipRoundedImageRectWithImage:(UIImage *)image size:(CGSize)size radius:(CGFloat)radius borderWith:(CGFloat)borderW borderColor:( UIColor *)borderColor{
++(UIImage *)ClipRoundRectImageWithImage:(UIImage *)image size:(CGSize)size radius:(CGFloat)radius borderWith:(CGFloat)borderW borderColor:( UIColor *)borderColor{
     UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(borderW * 0.5 , borderW * 0.5 , size.width - borderW, size.height - borderW) cornerRadius:radius];
     return  [UIImage ClipImagePathWithImage:image path:path borderWith:borderW borderColor:borderColor];
 }

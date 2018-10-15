@@ -15,6 +15,7 @@
 		1433AF202170546D000DBD74 /* ScrollTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1433AF1A2170546D000DBD74 /* ScrollTextView.m */; };
 		1433AF2321707ADA000DBD74 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 1433AF2221707ADA000DBD74 /* NSString+MD5.m */; };
 		1433AF2621707BE3000DBD74 /* NSString+Trim.m in Sources */ = {isa = PBXBuildFile; fileRef = 1433AF2521707BE3000DBD74 /* NSString+Trim.m */; };
+		1433AF29217470C6000DBD74 /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1433AF28217470C6000DBD74 /* ProgressView.m */; };
 		147B2FE0216F038100A6F95D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 147B2FDF216F038100A6F95D /* AppDelegate.m */; };
 		147B2FE3216F038100A6F95D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 147B2FE2216F038100A6F95D /* ViewController.m */; };
 		147B2FE6216F038100A6F95D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 147B2FE4216F038100A6F95D /* Main.storyboard */; };
@@ -59,6 +60,8 @@
 		1433AF2221707ADA000DBD74 /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
 		1433AF2421707BE3000DBD74 /* NSString+Trim.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Trim.h"; sourceTree = "<group>"; };
 		1433AF2521707BE3000DBD74 /* NSString+Trim.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Trim.m"; sourceTree = "<group>"; };
+		1433AF27217470C6000DBD74 /* ProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProgressView.h; sourceTree = "<group>"; };
+		1433AF28217470C6000DBD74 /* ProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProgressView.m; sourceTree = "<group>"; };
 		147B2FDB216F038100A6F95D /* FloraCore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FloraCore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		147B2FDE216F038100A6F95D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		147B2FDF216F038100A6F95D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -137,6 +140,8 @@
 				1433AF142170546D000DBD74 /* AdaptiveContainerView.m */,
 				1433AF192170546D000DBD74 /* ScratchView.h */,
 				1433AF162170546D000DBD74 /* ScratchView.m */,
+				1433AF27217470C6000DBD74 /* ProgressView.h */,
+				1433AF28217470C6000DBD74 /* ProgressView.m */,
 			);
 			path = component;
 			sourceTree = "<group>";
@@ -331,6 +336,7 @@
 				1433AF2321707ADA000DBD74 /* NSString+MD5.m in Sources */,
 				1433AF2621707BE3000DBD74 /* NSString+Trim.m in Sources */,
 				1433AF1B2170546D000DBD74 /* UIImage+CreateImage.m in Sources */,
+				1433AF29217470C6000DBD74 /* ProgressView.m in Sources */,
 				1433AF1F2170546D000DBD74 /* OdometerView.m in Sources */,
 				1433AF202170546D000DBD74 /* ScrollTextView.m in Sources */,
 				1433AF1C2170546D000DBD74 /* UIView+FrameExpanded.m in Sources */,
