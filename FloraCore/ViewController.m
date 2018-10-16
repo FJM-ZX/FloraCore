@@ -77,7 +77,7 @@
 //    pgV.frame = CGRectMake(0, 300, 300, 20);
     pgV.center_x = self.view.center_x;
     pgV.roundCornerRadius = 10;
-    pgV.isRoundCornerBar = YES;
+//    pgV.isRoundCornerBar = YES;
     pgV.isScaleBar = YES;
     pgV.progressBar = [[UIImageView alloc] initWithImage:ProgressBarImg];
     [self.view addSubview:pgV];
