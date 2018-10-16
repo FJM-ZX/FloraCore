@@ -127,7 +127,7 @@
         progressBarTmp.layer.masksToBounds = YES;
     }else{
         progressBarTmp.layer.cornerRadius = 0;
-        progressBarTmp.layer.masksToBounds = NO;
+        progressBarTmp.layer.masksToBounds = YES;
     }
 }
 - (void)setIsScaleBar:(BOOL)isScaleBar{
