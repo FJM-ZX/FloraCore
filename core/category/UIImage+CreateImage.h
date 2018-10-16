@@ -32,7 +32,7 @@ typedef NS_ENUM(NSInteger, ImageRoundCornerDirection) {
 + (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size;
 + (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size radius:(CGFloat) radius;
 + (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size radius:(CGFloat) radius borderWidth:(CGFloat)borderW borderColor:( UIColor *)borderColor;
-+ (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size radius:(CGFloat) radius borderWidth:(CGFloat)borderW borderColor:(UIColor *)borderColor borderLineDash:(double *)lineDash borderLineDashCount:(int)lineDashCount;
++ (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size radius:(CGFloat) radius borderWidth:(CGFloat)borderW borderColor:(UIColor *)borderColor borderLineDash:( CGFloat * _Nullable )lineDash borderLineDashCount:(int)lineDashCount;
 
 //根据渐变颜色生成图片
 + (UIImage *)imageWithSize:(CGSize)size radius:(CGFloat)radius startVColor:(UIColor*)startColor endVColor:(UIColor*)endColor;

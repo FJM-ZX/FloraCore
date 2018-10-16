@@ -22,8 +22,7 @@ CGFloat RadiansToDegrees(CGFloat radians) {return radians * 180/M_PI;};
     return [UIImage imageWithColor:color size:size radius:radius borderWidth:0.0f borderColor:[UIColor clearColor]];
 }
 + (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size radius:(CGFloat)radius borderWidth:(CGFloat)borderW borderColor:(UIColor *)borderColor{
-    CGFloat *p = nil;
-    return [UIImage imageWithColor:color size:size radius:radius borderWidth:borderW borderColor:borderColor borderLineDash:p borderLineDashCount:0];
+    return [UIImage imageWithColor:color size:size radius:radius borderWidth:borderW borderColor:borderColor borderLineDash:NULL borderLineDashCount:0];
 }
 + (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size radius:(CGFloat) radius borderWidth:(CGFloat)borderW borderColor:(UIColor *)borderColor borderLineDash:(CGFloat *)lineDash borderLineDashCount:(int)lineDashCount{
     UIGraphicsBeginImageContextWithOptions(size, NO, 0);
