@@ -15,6 +15,7 @@
 
 #import "UIImage+CreateImage.h"
 #import "UIView+FrameExpanded.h"
+#import "UIView+BgExpanded.h"
 
 
 @interface ViewController ()<ScratchViewDelegate>{
@@ -52,6 +53,7 @@
     
     ScrollTextView *stv = [[ScrollTextView alloc] initWithFrame:CGRectMake(0, 100, 200, 20)];
     stv.backgroundColor = [UIColor magentaColor];
+//    [stv setBorderWithRadius:6 borderWidth:1 borderColor:[UIColor blackColor]];
     stv.center_x = self.view.center_x;
     stv.fontSize = 18;
     stv.textColor = [UIColor blackColor];
@@ -97,9 +99,15 @@
     [self.view addSubview:slider];
     
     [slider addTarget:self action:@selector(sliderValueChanged:) forControlEvents:UIControlEventValueChanged];
+    
+    FJMView *testViewBgEp = [[FJMView alloc] initWithFrame:CGRectMake(0, 400, 100, 100)];
+    testViewBgEp.center_x = self.view.center_x;
+    [testViewBgEp setBorderWithRadius:6 borderWidth:1 borderColor:[UIColor blackColor]];
+    [self.view addSubview:testViewBgEp];
+    
 }
 -(void)fingerTappedOV:(id)sender{
-    [pgV updateProgress:0.5 isAnimation:YES];
+//    [pgV updateProgress:0.5 isAnimation:YES];
 //    [AdaptiveContainerView addTipsForView:odometerView content:@"this is odometer view!" afterDelay:3];
     
     UIView * scratchViewTV = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 200, 100)];
@@ -116,7 +124,6 @@
     coverTitle.textColor = [UIColor blackColor];
     coverTitle.font = [UIFont systemFontOfSize:20];
     coverTitle.textAlignment = NSTextAlignmentCenter;
-    randomValue = (arc4random() % 1000000) / 100.0;
     coverTitle.text = @"刮一刮";
     [coverImg addSubview:coverTitle];
     
