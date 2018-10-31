@@ -226,12 +226,20 @@ CGFloat RadiansToDegrees(CGFloat radians) {return radians * 180/M_PI;};
 }
 
 + (UIImage *)WaterImageWithImage:(UIImage *)image text:(NSString *)text textPoint:(CGPoint)point attributed:(NSDictionary * )attributed{
+    return [UIImage WaterImageWithImage:image text:text textRect:CGRectMake(point.x, point.y, 0, 0) attributed:attributed];
+}
++ (UIImage *)WaterImageWithImage:(UIImage *)image text:(NSString *)text textRect:(CGRect)textRect attributed:(NSDictionary * )attributed{
     //1.开启上下文
     UIGraphicsBeginImageContextWithOptions(image.size, NO, 0);
     //2.绘制图片
     [image drawInRect:CGRectMake(0, 0, image.size.width, image.size.height)];
     //添加水印文字
-    [text drawAtPoint:point withAttributes:attributed];
+    if (textRect.size.width <= 0 || textRect.size.height <= 0 ) {
+        [text drawAtPoint:textRect.origin withAttributes:attributed];
+    }else{
+        [text drawInRect:textRect withAttributes:attributed];
+    }
+    
     //3.从上下文中获取新图片
     UIImage * newImage = UIGraphicsGetImageFromCurrentImageContext();
     //4.关闭图形上下文

@@ -69,6 +69,7 @@ typedef NS_ENUM(NSInteger, ImageRoundCornerDirection) {
 + (UIImage *)resizeImage:(NSString *)imageName;
 //图片增加文字水印
 + (UIImage *)WaterImageWithImage:(UIImage *)image text:(NSString *)text textPoint:(CGPoint)point attributed:(NSDictionary * )attributed;
++ (UIImage *)WaterImageWithImage:(UIImage *)image text:(NSString *)text textRect:(CGRect)textRect attributed:(NSDictionary * )attributed;
 //图片增加图片水印
 + (UIImage *)WaterImageWithImage:(UIImage *)image waterImage:(UIImage *)waterImage waterImageRect:(CGRect)rect;
 @end

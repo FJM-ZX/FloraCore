@@ -69,6 +69,13 @@
     scaleImg.center_x = self.view.center_x+50;
     [self.view addSubview:scaleImg];
     
+    NSMutableParagraphStyle* style = [[NSMutableParagraphStyle alloc] init];
+    [style setAlignment:NSTextAlignmentCenter];
+    UIImageView *wtrImg = [[UIImageView alloc] initWithImage:[UIImage WaterImageWithImage:createImg.image text:@"test" textPoint:CGPointZero attributed:@{NSParagraphStyleAttributeName:style, NSForegroundColorAttributeName:[UIColor greenColor],NSFontAttributeName:[UIFont systemFontOfSize:37]}]];
+    wtrImg.y = 130;
+    wtrImg.center_x = self.view.center_x+150;
+    [self.view addSubview:wtrImg];
+    
     UIImage *img = [UIImage imageWithSize:CGSizeMake(100, 40) radius:0 startVColor:[UIColor redColor] endVColor:[UIColor blackColor]];
     UIImageView *createImg2 = [[UIImageView alloc] initWithImage:[UIImage ClipRoundCornerImageWithImage:img size:img.size radius:20 imageRoundCornerDirection:ImageRoundCornerTopRight|ImageRoundCornerTopLeft|ImageRoundCornerBottomRight]];
     createImg2.y = 250;
