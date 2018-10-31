@@ -64,6 +64,10 @@
     createImg.center_x = self.view.center_x;
     [self.view addSubview:createImg];
     
+    UIImageView *scaleImg = [[UIImageView alloc] initWithImage:[createImg.image scaleToSize:CGSizeMake(30, 30)]];
+    scaleImg.y = 130;
+    scaleImg.center_x = self.view.center_x+50;
+    [self.view addSubview:scaleImg];
     
     UIImage *img = [UIImage imageWithSize:CGSizeMake(100, 40) radius:0 startVColor:[UIColor redColor] endVColor:[UIColor blackColor]];
     UIImageView *createImg2 = [[UIImageView alloc] initWithImage:[UIImage ClipRoundCornerImageWithImage:img size:img.size radius:20 imageRoundCornerDirection:ImageRoundCornerTopRight|ImageRoundCornerTopLeft|ImageRoundCornerBottomRight]];
