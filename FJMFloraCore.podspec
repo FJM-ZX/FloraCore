@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "FJMFloraCore"
-  s.version      = "1.2.1"
+  s.version      = "1.2.2"
   s.summary      = "object-c component and category"
 
   # This description is used to generate tags and improve search results.

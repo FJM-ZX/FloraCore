@@ -105,7 +105,7 @@ CGFloat RadiansToDegrees(CGFloat radians) {return radians * 180/M_PI;};
 
 -(UIImage*)scaleToSize:(CGSize)size{
     size = CGSizeMake(size.width  , size.height );
-    UIGraphicsBeginImageContext(size);
+    UIGraphicsBeginImageContextWithOptions(size, NO, 0);
     [self drawInRect:CGRectMake(0, 0, size.width , size.height )];
     UIImage* scaledImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
