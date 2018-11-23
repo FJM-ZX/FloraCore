@@ -262,4 +262,21 @@ CGFloat RadiansToDegrees(CGFloat radians) {return radians * 180/M_PI;};
     //返回图片
     return newImage;
 }
+
++ (UIImage *)CreateShadowImageWithSize:(CGSize)size color:(UIColor*)color offset:(CGSize)offset blur:(CGFloat)blur radius:(CGFloat)radius{
+    UIGraphicsBeginImageContextWithOptions(CGSizeMake(size.width+fabs(offset.width)+blur*2.0, size.height+fabs(offset.height)+blur*2.0), NO, 0);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetFillColorWithColor(context, [color CGColor]);
+    CGFloat x = blur-offset.width;
+    x = x<0?0:x;
+    CGFloat y = blur-offset.height;
+    y = y<0?0:y;
+    UIBezierPath * path = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(x, y, size.width, size.height) cornerRadius:radius];
+    CGContextAddPath(context, [path CGPath]);
+    CGContextSetShadow(context,offset,blur);
+    CGContextFillPath(context);
+    UIImage * newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return newImage;
+}
 @end

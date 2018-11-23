@@ -108,6 +108,12 @@
     [self.view addSubview:slider];
     
     [slider addTarget:self action:@selector(sliderValueChanged:) forControlEvents:UIControlEventValueChanged];
+    
+    UIImage* shadowImg = [UIImage CreateShadowImageWithSize:CGSizeMake(20, 20) color:[UIColor blueColor] offset:CGSizeMake(0, 2) blur:3 radius:5];
+    UIImageView *shadowImgView = [[UIImageView alloc] initWithImage:shadowImg];
+    shadowImgView.center_x = self.view.center_x;
+    shadowImgView.y = 400;
+    [self.view addSubview:shadowImgView];
 }
 -(void)fingerTappedOV:(id)sender{
     [pgV updateProgress:0.5 isAnimation:YES];

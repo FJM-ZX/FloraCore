@@ -72,6 +72,8 @@ typedef NS_ENUM(NSInteger, ImageRoundCornerDirection) {
 + (UIImage *)WaterImageWithImage:(UIImage *)image text:(NSString *)text textRect:(CGRect)textRect attributed:(NSDictionary * )attributed;
 //图片增加图片水印
 + (UIImage *)WaterImageWithImage:(UIImage *)image waterImage:(UIImage *)waterImage waterImageRect:(CGRect)rect;
+//带阴影的矩形
++ (UIImage *)CreateShadowImageWithSize:(CGSize)size color:(UIColor*)color offset:(CGSize)offset blur:(CGFloat)blur radius:(CGFloat)radius;
 @end
 
 NS_ASSUME_NONNULL_END
