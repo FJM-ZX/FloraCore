@@ -43,7 +43,8 @@ typedef NS_ENUM(NSInteger, ImageRoundCornerDirection) {
 + (UIImage *)imageWithSize:(CGSize)size radius:(CGFloat)radius startColor:(UIColor*)startColor endColor:(UIColor*)endColor isH:(BOOL)isH;
 + (UIImage *)imageWithSize:(CGSize)size radius:(CGFloat)radius startColor:(UIColor*)startColor midColor:(UIColor*)midColor endColor:(UIColor*)endColor isH:(BOOL)isH;
 + (UIImage *)imageWithSize:(CGSize)size radius:(CGFloat)radius colors:(NSArray *)colors locations:(CGFloat *)locations isH:(BOOL)isH;
-
+//colors @[(__bridge id) [color CGColor],...];
++ (UIImage *)imageRadialGradientWithSize:(CGSize)size radius:(CGFloat) radius colors:(NSArray *)colors locations:(CGFloat *)locations;
 //裁剪圆形图片
 + (UIImage *)ClipCircleImageWithImage:(UIImage *)image circleSize:(CGSize)size;
 //裁剪带边框的圆形图片

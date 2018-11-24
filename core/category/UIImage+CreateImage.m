@@ -103,6 +103,27 @@ CGFloat RadiansToDegrees(CGFloat radians) {return radians * 180/M_PI;};
     return image;
 }
 
++ (UIImage *)imageRadialGradientWithSize:(CGSize)size radius:(CGFloat) radius colors:(NSArray *)colors locations:(CGFloat *)locations{
+    UIGraphicsBeginImageContextWithOptions(size, NO, 0);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    UIBezierPath * path = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, 0, size.width, size.height) cornerRadius:radius];
+    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+    CGGradientRef gradient = CGGradientCreateWithColors(colorSpace, (__bridge CFArrayRef) colors, locations);
+    CGRect pathRect = CGPathGetBoundingBox([path CGPath]);
+    CGPoint startPoint = CGPointMake(CGRectGetMidX(pathRect), CGRectGetMidY(pathRect));
+    CGFloat rd = sqrt(CGRectGetMaxX(pathRect)*CGRectGetMaxX(pathRect)+CGRectGetMaxY(pathRect)*CGRectGetMaxY(pathRect))/2;
+    CGContextSaveGState(context);
+    CGContextAddPath(context, [path CGPath]);
+    CGContextEOClip(context);
+    CGContextDrawRadialGradient(context, gradient, startPoint, 0, startPoint, rd, kCGGradientDrawsBeforeStartLocation);
+    CGContextRestoreGState(context);
+    CGGradientRelease(gradient);
+    CGColorSpaceRelease(colorSpace);
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
+}
+
 -(UIImage*)scaleToSize:(CGSize)size{
     size = CGSizeMake(size.width  , size.height );
     UIGraphicsBeginImageContextWithOptions(size, NO, 0);

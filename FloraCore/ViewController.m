@@ -112,8 +112,15 @@
     UIImage* shadowImg = [UIImage CreateShadowImageWithSize:CGSizeMake(20, 20) color:[UIColor blueColor] offset:CGSizeMake(0, 2) blur:3 radius:5];
     UIImageView *shadowImgView = [[UIImageView alloc] initWithImage:shadowImg];
     shadowImgView.center_x = self.view.center_x;
-    shadowImgView.y = 400;
+    shadowImgView.y = 370;
     [self.view addSubview:shadowImgView];
+    
+    CGFloat locations[] = { 0.0, 0.5, 1.0 };
+    UIImage* rgImg = [UIImage imageRadialGradientWithSize:CGSizeMake(80, 40) radius:5 colors:@[(__bridge id) [[UIColor redColor] CGColor],(__bridge id) [[UIColor greenColor] CGColor],(__bridge id) [[UIColor blueColor] CGColor]] locations:locations];
+    UIImageView *rgImgView = [[UIImageView alloc] initWithImage:rgImg];
+    rgImgView.center_x = self.view.center_x;
+    rgImgView.y = 400;
+    [self.view addSubview:rgImgView];
 }
 -(void)fingerTappedOV:(id)sender{
     [pgV updateProgress:0.5 isAnimation:YES];
