@@ -12,6 +12,7 @@
 #import "ScratchView.h"
 #import "ScrollTextView.h"
 #import "ProgressView.h"
+#import "FunBezierRatioVIew.h"
 
 #import "UIImage+CreateImage.h"
 #import "UIView+FrameExpanded.h"
@@ -121,6 +122,11 @@
     rgImgView.center_x = self.view.center_x;
     rgImgView.y = 400;
     [self.view addSubview:rgImgView];
+    FunBezierRatioVIew * fun1 = [[FunBezierRatioVIew alloc] init];
+    [self.view addSubview:fun1];
+    fun1.x = self.view.center_x;
+    fun1.y = 440;
+    [fun1 setRadius:40 lineWidth:5 startAngle:135 endAngle:45 backColor:[UIColor grayColor] ratios:@[@0.35,@0.1,@0.2] colors:@[[UIColor greenColor],[UIColor yellowColor],[UIColor redColor]] animDuration:1 isOverlap:NO];
 }
 -(void)fingerTappedOV:(id)sender{
     [pgV updateProgress:0.5 isAnimation:YES];
